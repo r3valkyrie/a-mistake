@@ -2,7 +2,8 @@ doctype html
 html
     include includes/head.pug
     body
-        iframe(src='assets/justrelax.mp3' allow='autoplay')
+        audio(controls autoplay)
+            source(src='assets/justrelax.mp3' type='audio/mp3')
         div(id='particles-js')
         h1 placeholder<br>persistent will be online soon<br>web design is my passion
         script(src='bundle.js')
