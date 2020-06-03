@@ -2,11 +2,11 @@ doctype html
 html
     include includes/head.pug
     body
-        audio(autoplay loop)
-            source(src="assets/justrelax.mp3")
+        iframe(src='assets/justrelax.mp3' allow='autoplay')
         div(id='particles-js')
         h1 placeholder<br>persistent will be online soon<br>web design is my passion
         script(src='bundle.js')
+
         script.
             particlesJS.load('particles-js', 'assets/particles.json', function(){
                 console.log('callback - particles.js config loaded');
