@@ -1,2 +1,1 @@
-# gulp-boilerplate
-A template for gulp projects.
+... and this should not be

@@ -2,6 +2,12 @@ doctype html
 html
     include includes/head.pug
     body
-        h1 Hello!
-        p Greetings from the Gulp boilerplate.
+        audio(autoplay loop)
+            source(src="assets/justrelax.mp3")
+        div(id='particles-js')
+        h1 placeholder<br>persistent will be online soon<br>web design is my passion
         script(src='bundle.js')
+        script.
+            particlesJS.load('particles-js', 'assets/particles.json', function(){
+                console.log('callback - particles.js config loaded');
+            });

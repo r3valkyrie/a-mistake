@@ -77,6 +77,11 @@ function build_pug(done){
         .pipe(gulp.dest(dirs.out.pug))
 }
 
+function copyassets(done){
+    return gulp.src('./src/assets/*')
+        .pipe(gulp.dest('./dist/assets/'))
+}
+
 function clean(done){
     if (!opts.clean) return done();
 
@@ -104,7 +109,7 @@ function bswatch(done){
 }
 
 // Exports
-const build = gulp.series(clean, build_sass, lintJS, buildJS, build_pug);
+const build = gulp.series(clean, copyassets, build_sass, lintJS, buildJS, build_pug);
 exports.default = build;
 
 const srv = gulp.series(exports.default, startSrv, bswatch)
